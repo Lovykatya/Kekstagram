@@ -15,7 +15,6 @@ var UploadPhotoEditor = () => {
     document.addEventListener('keydown', onPopupEscKeydown);
 } 
 
-
 var ClosePhotoEditor = () => {
     UploadPhotoForm.classList.add('hidden');
     Body.classList.remove('modal-open');

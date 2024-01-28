@@ -14,6 +14,13 @@ const CloseModalUploadPhotoButton = document.querySelector('#upload-cancel');
 const ScaleBarForm = document.querySelector('.img-upload__effect-level');
 const ScaleBarSlider = UploadPhotoForm.querySelector('.effect-level__slider');
 const EffectLevelValue = UploadPhotoForm.querySelector('.effect-level__value');
+const ImgUploadForm = document.querySelector('#upload-select-image');
+const TemplateSuccessMessage = document.querySelector('#success').content.querySelector('.success');
+const CloseSuccessMessageButton = document.querySelector('.success__button');
+const TemplateErrorMessage = document.querySelector('#error').content.querySelector('.error');
+const CloseErrorMessageButton = document.querySelector('.error__button');
+const ModalErrorMessage = document.querySelector('.error');
+
 
 const SCALE_MIN_VALUE = 25;
 const SCALE_MAX_VALUE = 100;
@@ -47,6 +54,6 @@ let CreatePhotoDescription = (index) => ({
 
 let CatalogDescription = Array.from({length: COUNTOFPHOTO}, (_, index) => CreatePhotoDescription(index + 1));
 
-export {otherUseresPhoto, templatePicture, Submit, ScaleControlSmaller, ScaleControlBigger, ScaleControlValue, PhotoUploadPreview, UploadPhotoButton, UploadPhotoForm, Body, CloseModalUploadPhotoButton, SCALE_MIN_VALUE, SCALE_MAX_VALUE, SCALE_STEP, DEFAULT_SCALE, ScaleBarForm, ScaleBarSlider, EffectLevelValue};
+export {ModalErrorMessage, ImgUploadForm, TemplateErrorMessage, CloseErrorMessageButton, otherUseresPhoto, templatePicture, Submit, ScaleControlSmaller, ScaleControlBigger, ScaleControlValue, PhotoUploadPreview, UploadPhotoButton, UploadPhotoForm, Body, CloseModalUploadPhotoButton, SCALE_MIN_VALUE, SCALE_MAX_VALUE, SCALE_STEP, DEFAULT_SCALE, ScaleBarForm, ScaleBarSlider, EffectLevelValue, TemplateSuccessMessage, CloseSuccessMessageButton};
 export {CreatePhotoDescription, CatalogDescription, IsEscape};
 
