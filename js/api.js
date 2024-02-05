@@ -1,6 +1,12 @@
+const getData = (onSuccess, onError) => {
+  fetch ('https://27.javascript.htmlacademy.pro/kekstagram-simple/data')
+    .then((response) => response.json())
+    .then ((photos) => onSuccess(photos))
+    .catch(() => onError())
+}
 
-const PostData = (onSuccess, onError, body) => {
-  fetch(
+const PostData = async (onSuccess, onError, body) => {
+  await fetch(
     'https://27.javascript.htmlacademy.pro/kekstagram-simple',
     {
       method: 'POST',
@@ -11,11 +17,9 @@ const PostData = (onSuccess, onError, body) => {
     })
     .then((response) => {
       if (response.ok){
-        console.log("hf,jnf");
         onSuccess()
        }
        else {
-        console.log("блокddddddd>");
         onError('Не удалось отправить форму. Попробуйте ещё раз')}
     }
   )
@@ -23,4 +27,4 @@ const PostData = (onSuccess, onError, body) => {
 }  
   
 
-export {PostData}
+export {getData, PostData}

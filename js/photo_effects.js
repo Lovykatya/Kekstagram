@@ -51,7 +51,8 @@ const onUpdateEffect = () => {
 
 const setDefaultEffect = () => {
   CurrentEffect = DEFAULT_EFFECT;
-  UpdateEffect()
+  document.querySelector('#effect-none').checked = true;
+  UpdateEffect();
 }
 
 noUiSlider.create(ScaleBarSlider, {
